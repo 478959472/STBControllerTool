@@ -1,0 +1,1 @@
+adb shell am stopservice --es rabbitHost "192.168.1.101" com.huawei.android.stbcontrollertool/com.huawei.android.stbcontrollertool.MainService

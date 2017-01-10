@@ -65,12 +65,17 @@ public class MainService extends Service {
         // 获得HandlerThread的Looper队列并用于Handler
         mServiceLooper = thread.getLooper();
         mServiceHandler = new ServiceHandler(mServiceLooper);
-        mrabbitConnect=new RabbitConnect("189.11.5.35","ccy","123456");
     }
 
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        String rabbitHost = "192.168.1.101";
+        if(intent.getStringExtra("rabbitHost")!=null&&!intent.getStringExtra("rabbitHost").equals("")){
+            rabbitHost=intent.getStringExtra("rabbitHost");
+            Log.i(TAG,"外部参数rabbitHost："+rabbitHost);
+        }
+        mrabbitConnect=new RabbitConnect(rabbitHost,"ccy","123456");
         Toast.makeText(this, "service starting", Toast.LENGTH_SHORT).show();
 
         // 对于每一个启动请求，都发送一个消息来启动一个处理

@@ -4,6 +4,8 @@ package com.huawei.android.stbcontrollertool;
  * Created by 47895 on 2017/1/7.
  */
 
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -19,6 +21,7 @@ public class ShellExecuter {
 
         Process p;
         try {
+            Log.i("ShellExecuter","执行命令："+command);
             p = Runtime.getRuntime().exec(command);
             p.waitFor();
             BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));

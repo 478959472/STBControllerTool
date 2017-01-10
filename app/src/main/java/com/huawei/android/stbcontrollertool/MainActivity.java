@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mrabbitConnect=new RabbitConnect("189.11.5.35","ccy","123456");
+
+        mrabbitConnect=new RabbitConnect("192.168.1.101","ccy","123456");
         setupPubButton();
 
         final Handler incomingMessageHandler = new Handler() {
