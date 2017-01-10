@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">STBControllerTool</string>
+    <string name="button_runService">开启服务</string>
+    <string name="button_stopService">停止服务</string>
+    <string name="button_send">发送</string>
+    <string name="button_runShell">运行shell</string>
+    <string name="button_connect">连接</string>
+    <string name="enter_a_message">Enter a message</string>
+    <string name="enter_showMessage">show message</string>
+    <string name="textview">TextView</string>
+</resources>
